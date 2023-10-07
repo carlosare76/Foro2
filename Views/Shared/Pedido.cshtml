@@ -1,0 +1,21 @@
+﻿@model Foro2.Models.PedidoViewModel
+
+<h1>Detalles del Pedido</h1>
+
+<p>Número de Pedido: @Model.NumeroPedido</p>
+<p>Fecha del Pedido: @Model.FechaPedido</p>
+
+<h2>Productos:</h2>
+<ul>
+    @foreach (var producto in Model.Productos)
+    {
+        <li>
+            @producto.Nombre - Precio: @producto.Precio
+        </li>
+    }
+</ul>
+
+
+
+
+

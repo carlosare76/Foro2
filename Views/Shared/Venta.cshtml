@@ -1,0 +1,16 @@
+﻿@model Foro2.Models.VentaViewModel
+
+<h1>Detalles de la Venta</h1>
+
+<p>Número de Venta: @Model.NumeroVenta</p>
+<p>Fecha de Venta: @Model.FechaVenta</p>
+
+<h2>Productos Vendidos:</h2>
+<ul>
+    @foreach (var producto in Model.ProductosVendidos)
+    {
+        <li>
+            @producto.Nombre - Precio: @producto.Precio
+        </li>
+    }
+</ul>
